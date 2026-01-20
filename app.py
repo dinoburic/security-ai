@@ -4,8 +4,8 @@ from groq import Groq
 
 # --- KONFIGURACIJA STRANICE ---
 st.set_page_config(
-    page_title="Pentest AI Assistant",
-    page_icon="🛡️",
+    page_title="cveorg",
+    page_icon="",
     layout="wide"
 )
 
@@ -97,4 +97,5 @@ if prompt := st.chat_input("Unesi komandu, Nmap output ili pitanje..."):
         # Ovdje koristimo pomoćnu funkciju da izvučemo samo tekst
         response = st.write_stream(generate_chat_responses(stream))
     
+
     st.session_state.messages.append({"role": "assistant", "content": response})
